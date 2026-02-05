@@ -1,0 +1,133 @@
+2026-02-05 13:25:57 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-05 13:26:00 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_01 ==========
+2026-02-05 13:26:00 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:03 INFO  c.a.t.SignUpTest - Entering Name: Rahul Sharma
+2026-02-05 13:26:03 INFO  c.a.t.SignUpTest - Entering Email: invalid.com
+2026-02-05 13:26:04 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:04 INFO  c.a.t.SignUpTest - Reading EMAIL field HTML5 message
+2026-02-05 13:26:04 INFO  c.a.t.SignUpTest - Expected Error from Excel : Please include an '@' in the email address. 'invalid.com' is missing an '@'.
+2026-02-05 13:26:04 INFO  c.a.t.SignUpTest - Actual Error from UI      : Please include an '@' in the email address. 'invalid.com' is missing an '@'.
+2026-02-05 13:26:04 INFO  c.a.t.SignUpTest - ========== END NEGATIVE TEST: TC_01 ==========
+2026-02-05 13:26:05 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_02 ==========
+2026-02-05 13:26:05 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:07 INFO  c.a.t.SignUpTest - Entering Name: 
+2026-02-05 13:26:08 INFO  c.a.t.SignUpTest - Entering Email: rahul02@test.com
+2026-02-05 13:26:08 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:08 INFO  c.a.t.SignUpTest - Reading NAME field HTML5 message
+2026-02-05 13:26:08 INFO  c.a.t.SignUpTest - Expected Error from Excel : Please fill in this field.
+2026-02-05 13:26:08 INFO  c.a.t.SignUpTest - Actual Error from UI      : Please fill out this field.
+2026-02-05 13:26:09 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_03 ==========
+2026-02-05 13:26:09 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:13 INFO  c.a.t.SignUpTest - Entering Name: Rahul Sharma
+2026-02-05 13:26:13 INFO  c.a.t.SignUpTest - Entering Email: 
+2026-02-05 13:26:13 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:13 INFO  c.a.t.SignUpTest - Reading EMAIL field HTML5 message
+2026-02-05 13:26:13 INFO  c.a.t.SignUpTest - Expected Error from Excel : Please fill in this field.
+2026-02-05 13:26:13 INFO  c.a.t.SignUpTest - Actual Error from UI      : Please fill out this field.
+2026-02-05 13:26:14 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_04 ==========
+2026-02-05 13:26:14 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:16 INFO  c.a.t.SignUpTest - Entering Name: Rahul Sharma
+2026-02-05 13:26:17 INFO  c.a.t.SignUpTest - Entering Email: rahul05@test..com
+2026-02-05 13:26:17 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:17 INFO  c.a.t.SignUpTest - Reading EMAIL field HTML5 message
+2026-02-05 13:26:17 INFO  c.a.t.SignUpTest - Expected Error from Excel : ' is used at a wrong position in 'test..com'.
+2026-02-05 13:26:17 INFO  c.a.t.SignUpTest - Actual Error from UI      : '.' is used at a wrong position in 'test..com'.
+2026-02-05 13:26:17 INFO  c.a.t.SignUpTest - ========== END NEGATIVE TEST: TC_04 ==========
+2026-02-05 13:26:18 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_05 ==========
+2026-02-05 13:26:18 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:21 INFO  c.a.t.SignUpTest - Entering Name: A
+2026-02-05 13:26:21 INFO  c.a.t.SignUpTest - Entering Email: a@test.com
+2026-02-05 13:26:22 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:23 INFO  c.a.t.SignUpTest - Reading EMAIL field HTML5 message
+2026-02-05 13:26:23 INFO  c.a.t.SignUpTest - Expected Error from Excel : A part followed by '@' should not contain the symbol':'.
+2026-02-05 13:26:23 INFO  c.a.t.SignUpTest - Actual Error from UI      : 
+2026-02-05 13:26:24 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_06 ==========
+2026-02-05 13:26:24 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:27 INFO  c.a.t.SignUpTest - Entering Name: 
+2026-02-05 13:26:27 INFO  c.a.t.SignUpTest - Entering Email: rahul0dds5@test..com
+2026-02-05 13:26:27 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:27 INFO  c.a.t.SignUpTest - Reading NAME field HTML5 message
+2026-02-05 13:26:27 INFO  c.a.t.SignUpTest - Expected Error from Excel : Please fill in this field.
+2026-02-05 13:26:27 INFO  c.a.t.SignUpTest - Actual Error from UI      : Please fill out this field.
+2026-02-05 13:26:29 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_07 ==========
+2026-02-05 13:26:29 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:30 INFO  c.a.t.SignUpTest - Entering Name: Rahul Sharma
+2026-02-05 13:26:30 INFO  c.a.t.SignUpTest - Entering Email: rahul@@gmail.com
+2026-02-05 13:26:30 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:31 INFO  c.a.t.SignUpTest - Reading EMAIL field HTML5 message
+2026-02-05 13:26:31 INFO  c.a.t.SignUpTest - Expected Error from Excel : A part following '@' should not contain the symbol '@'.
+2026-02-05 13:26:31 INFO  c.a.t.SignUpTest - Actual Error from UI      : A part following '@' should not contain the symbol '@'.
+2026-02-05 13:26:31 INFO  c.a.t.SignUpTest - ========== END NEGATIVE TEST: TC_07 ==========
+2026-02-05 13:26:32 INFO  c.a.t.SignUpTest - ========== STARTING NEGATIVE TEST: TC_08 ==========
+2026-02-05 13:26:32 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:35 INFO  c.a.t.SignUpTest - Entering Name: Rahul Sharma
+2026-02-05 13:26:36 INFO  c.a.t.SignUpTest - Entering Email: rahul@gmail..com
+2026-02-05 13:26:36 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:36 INFO  c.a.t.SignUpTest - Reading EMAIL field HTML5 message
+2026-02-05 13:26:36 INFO  c.a.t.SignUpTest - Expected Error from Excel : is used at a wrong position in 'gmail..com'.
+2026-02-05 13:26:36 INFO  c.a.t.SignUpTest - Actual Error from UI      : '.' is used at a wrong position in 'gmail..com'.
+2026-02-05 13:26:36 INFO  c.a.t.SignUpTest - ========== END NEGATIVE TEST: TC_08 ==========
+2026-02-05 13:26:37 INFO  c.a.t.SignUpTest - ========== STARTING EXISTING EMAIL TEST: TC_21 ==========
+2026-02-05 13:26:37 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:41 INFO  c.a.t.SignUpTest - Entering Name: Rahul Sharma
+2026-02-05 13:26:41 INFO  c.a.t.SignUpTest - Entering Existing Email: rahul01_new@test.com
+2026-02-05 13:26:41 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:54 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_09 ==========
+2026-02-05 13:26:54 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:26:57 INFO  c.a.t.SignUpTest - Entering Valid Name: Aman Verma
+2026-02-05 13:26:57 INFO  c.a.t.SignUpTest - Entering Valid Email: aman01@test.com
+2026-02-05 13:26:57 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:26:59 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:00 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_10 ==========
+2026-02-05 13:27:00 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:03 INFO  c.a.t.SignUpTest - Entering Valid Name: Pooja Singh
+2026-02-05 13:27:03 INFO  c.a.t.SignUpTest - Entering Valid Email: pooja01@test.com
+2026-02-05 13:27:03 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:05 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:06 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_11 ==========
+2026-02-05 13:27:06 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:10 INFO  c.a.t.SignUpTest - Entering Valid Name: Rakesh Kumar
+2026-02-05 13:27:10 INFO  c.a.t.SignUpTest - Entering Valid Email: rakesh01@test.com
+2026-02-05 13:27:10 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:11 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:13 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_12 ==========
+2026-02-05 13:27:13 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:16 INFO  c.a.t.SignUpTest - Entering Valid Name: Neha Patel
+2026-02-05 13:27:16 INFO  c.a.t.SignUpTest - Entering Valid Email: neha01@test.com
+2026-02-05 13:27:16 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:17 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:18 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_13 ==========
+2026-02-05 13:27:18 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:21 INFO  c.a.t.SignUpTest - Entering Valid Name: Vikram Yadav
+2026-02-05 13:27:21 INFO  c.a.t.SignUpTest - Entering Valid Email: vikram01@test.com
+2026-02-05 13:27:21 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:22 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:23 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_14 ==========
+2026-02-05 13:27:23 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:25 INFO  c.a.t.SignUpTest - Entering Valid Name: Suman Das
+2026-02-05 13:27:25 INFO  c.a.t.SignUpTest - Entering Valid Email: suman01@test.com
+2026-02-05 13:27:26 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:27 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:28 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_15 ==========
+2026-02-05 13:27:28 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:31 INFO  c.a.t.SignUpTest - Entering Valid Name: Arjun Mehta
+2026-02-05 13:27:31 INFO  c.a.t.SignUpTest - Entering Valid Email: arjun01@test.com
+2026-02-05 13:27:32 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:33 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:35 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_16 ==========
+2026-02-05 13:27:35 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:37 INFO  c.a.t.SignUpTest - Entering Valid Name: Priya Nair
+2026-02-05 13:27:37 INFO  c.a.t.SignUpTest - Entering Valid Email: priya01@test.com
+2026-02-05 13:27:37 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:39 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:40 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_17 ==========
+2026-02-05 13:27:40 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:43 INFO  c.a.t.SignUpTest - Entering Valid Name: Mohit Agarwal
+2026-02-05 13:27:44 INFO  c.a.t.SignUpTest - Entering Valid Email: mohit01@test.com
+2026-02-05 13:27:44 INFO  c.a.t.SignUpTest - Clicking Signup button
+2026-02-05 13:27:45 INFO  c.a.t.SignUpTest - Verifying Page Title
+2026-02-05 13:27:46 INFO  c.a.t.SignUpTest - ========== STARTING POSITIVE TEST: TC_18 ==========
+2026-02-05 13:27:46 INFO  c.a.t.SignUpTest - Opening Signup page
+2026-02-05 13:27:49 INFO  c.a.t.SignUpTest - Entering Valid Name: Kiran Reddy
