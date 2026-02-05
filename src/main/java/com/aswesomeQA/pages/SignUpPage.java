@@ -23,7 +23,7 @@ public class SignUpPage extends CommonToAllPage {
             By.xpath("//h2[normalize-space()='Enter Account Information']");
 
     private By emailAlreadyExistError =
-            By.xpath("//p[contains(text(),'Email Address already exist')]");
+            By.xpath("//p[contains(text(),'Email Address already exist!')]");
 
     // ---------------------- Navigation --------------------
 

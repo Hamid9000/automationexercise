@@ -17,6 +17,7 @@
     <aspectj.version>1.9.20</aspectj.version>
   </properties>
 
+
   <dependencies>
 
     <!-- Selenium WebDriver -->
@@ -143,7 +144,7 @@
         <configuration>
           <testFailureIgnore>false</testFailureIgnore>
           <suiteXmlFiles>
-            <suiteXmlFile>src/test/resources/LoginPage.xml</suiteXmlFile>
+            <suiteXmlFile>src/test/resources/AllTest.xml</suiteXmlFile>
           </suiteXmlFiles>
           <argLine>
             -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"

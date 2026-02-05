@@ -18,7 +18,7 @@ public class CommonToAllPage extends JavaScriptUtil{
     }
 
     private WebDriverWait getWait() {
-        return new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+        return new WebDriverWait(getDriver(), Duration.ofSeconds(15));
     }
 
     public WebElement waitForVisible(By locator) {
