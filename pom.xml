@@ -1,14 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+         http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.aswesomeQA</groupId>
+  <groupId>com.awesomeqa</groupId>
   <artifactId>AwesomeQA</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>AwesomeQA</name>
-  <url>http://maven.apache.org</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,22 +18,22 @@
   </properties>
 
   <dependencies>
+
     <!-- Selenium WebDriver -->
-    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>4.40.0</version>
     </dependency>
 
-    <!-- TestNG for testing -->
+    <!-- TestNG -->
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
       <version>7.8.0</version>
     </dependency>
 
-    <!-- Allure TestNG integration -->
+    <!-- Allure -->
     <dependency>
       <groupId>io.qameta.allure</groupId>
       <artifactId>allure-testng</artifactId>
@@ -44,41 +46,51 @@
       <version>2.26.0</version>
     </dependency>
 
-    <!-- Apache Commons IO for file operations -->
+    <!-- Commons IO -->
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <version>2.15.1</version>
     </dependency>
 
-    <!-- ReportNG for enhanced TestNG reports -->
+    <!-- ReportNG -->
     <dependency>
       <groupId>org.uncommons</groupId>
       <artifactId>reportng</artifactId>
       <version>1.1.2</version>
     </dependency>
 
-    <!-- AssertJ for fluent assertions -->
+    <!-- AssertJ -->
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
       <version>3.25.1</version>
     </dependency>
 
-    <!-- Log4j 2 for logging -->
+    <!-- ========== LOGGING (CORRECT SETUP) ========== -->
+
+    <!-- SLF4J API -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.9</version>
+    </dependency>
+
+    <!-- LOGBACK IMPLEMENTATION -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.14</version>
+    </dependency>
+
+    <!-- Bridge stray Log4j2 calls → SLF4J (prevents warning) -->
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-core</artifactId>
+      <artifactId>log4j-to-slf4j</artifactId>
       <version>2.20.0</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.apache.logging.log4j</groupId>
-      <artifactId>log4j-api</artifactId>
-      <version>2.20.0</version>
-    </dependency>
-
-    <!-- Apache POI for Excel file handling -->
+    <!-- Apache POI -->
     <dependency>
       <groupId>org.apache.poi</groupId>
       <artifactId>poi</artifactId>
@@ -97,13 +109,14 @@
       <version>4.1.2</version>
     </dependency>
 
-    <!-- AspectJ Weaver for Allure attachment support -->
+    <!-- AspectJ -->
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjweaver</artifactId>
       <version>${aspectj.version}</version>
     </dependency>
 
+    <!-- WebDriverManager -->
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
@@ -114,7 +127,7 @@
 
   <build>
     <plugins>
-      <!-- Compiler plugin -->
+
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.0</version>
@@ -124,7 +137,6 @@
         </configuration>
       </plugin>
 
-      <!-- Surefire plugin for TestNG with AspectJ weaving -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
@@ -139,7 +151,6 @@
         </configuration>
       </plugin>
 
-      <!-- Allure plugin -->
       <plugin>
         <groupId>io.qameta.allure</groupId>
         <artifactId>allure-maven</artifactId>
@@ -151,7 +162,6 @@
         </configuration>
       </plugin>
 
-      <!-- Other Maven plugins -->
       <plugin>
         <artifactId>maven-clean-plugin</artifactId>
         <version>3.1.0</version>
@@ -186,6 +196,7 @@
         <artifactId>maven-project-info-reports-plugin</artifactId>
         <version>3.0.0</version>
       </plugin>
+
     </plugins>
-  </build>dependencies>
+  </build>
 </project>

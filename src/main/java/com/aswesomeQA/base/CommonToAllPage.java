@@ -1,4 +1,6 @@
 package com.aswesomeQA.base;
+
+import com.aswesomeQA.utils.JavaScriptUtil;
 import com.aswesomeQA.utils.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -9,36 +11,39 @@ import java.time.Duration;
 
 import static com.aswesomeQA.driver.DriverManager.getDriver;
 
-public class CommonToAllPage {
+public class CommonToAllPage extends JavaScriptUtil{
 
-    public void openUrl(){
+    public void openUrl() {
         getDriver().get(PropertiesReader.readKeys("baseUrl"));
     }
 
-    private WebDriverWait getWait(){
+    private WebDriverWait getWait() {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(10));
     }
 
-    public WebElement waitForVisible(By locator){
+    public WebElement waitForVisible(By locator) {
         return getWait()
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public WebElement waitForClickable(By locator){
+    public WebElement waitForClickable(By locator) {
         return getWait()
                 .until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    public WebElement waitForPresent(By locator){
+    public WebElement waitForPresent(By locator) {
         return getWait()
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
     }
 
-    public void waitForUrlContains(String text){
+    public void waitForUrlContains(String text) {
         getWait().until(ExpectedConditions.urlContains(text));
     }
 
-    public void waitForTitle(String title){
-        getWait().until(ExpectedConditions.titleContains(title));
+    public String getPageTitle() {
+        getWait().until(ExpectedConditions.not(ExpectedConditions.titleIs("")));
+        return getDriver().getTitle();
     }
+
+
 }
