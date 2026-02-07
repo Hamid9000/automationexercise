@@ -1,17 +1,27 @@
 package com.aswesomeQA.base;
 
-import com.aswesomeQA.utils.JavaScriptUtil;
 import com.aswesomeQA.utils.PropertiesReader;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static com.aswesomeQA.driver.DriverManager.getDriver;
 
-public class CommonToAllPage extends JavaScriptUtil{
+
+public class CommonToAllPage {
+    protected WebDriver driver;
+
+    public CommonToAllPage(WebDriver driver){
+        this.driver = driver;
+    }
+
+    public WebDriver getDriver(){
+        return driver;
+    }
+
 
     public void openUrl() {
         getDriver().get(PropertiesReader.readKeys("baseUrl"));
@@ -31,6 +41,7 @@ public class CommonToAllPage extends JavaScriptUtil{
                 .until(ExpectedConditions.elementToBeClickable(locator));
     }
 
+
     public WebElement waitForPresent(By locator) {
         return getWait()
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
@@ -44,6 +55,15 @@ public class CommonToAllPage extends JavaScriptUtil{
         getWait().until(ExpectedConditions.not(ExpectedConditions.titleIs("")));
         return getDriver().getTitle();
     }
+    public String getValidationMessage(By locator) {
+        return waitForVisible(locator)
+                .getAttribute("validationMessage");
+    }
+    public void waitForInvisibility(By locator) {
+        getWait().until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
+
 
 
 }

@@ -1,0 +1,9 @@
+TC_ID,Name,Email,Expected_Result
+SIN_NE_01,Rahul Sharma,invalid.com,Please include an '@' in the email address. 'invalid.com' is missing an '@'.
+SIN_NE_02,,rahul02@test.com,Please fill out this field.
+SIN_NE_03,Rahul Sharma,,Please fill out this field.
+SIN_NE_04,Rahul Sharma,rahul05@test..com,' is used at a wrong position in 'test..com'.
+SIN_NE_05,AB,a@;test.com,A part following '@' should not contain the symbol ';'.
+SIN_NE_06,,rahul0dds5@test..com,Please fill out this field.
+SIN_NE_07,Rahul Sharma,rahul@@gmail.com,A part following '@' should not contain the symbol '@'.
+SIN_NE_08,Rahul Sharma,rahul@gmail..com,.' is used at a wrong position in 'gmail..com'.

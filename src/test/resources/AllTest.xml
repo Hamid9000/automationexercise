@@ -10,7 +10,7 @@
 
     <test verbose="2" preserve-order="true" name="AwesomeQA Tests">
         <classes>
-            <class name="com.aswesomeQA.test.SignUpTest"/>
+            <class name="com.aswesomeQA.test.signup.SignUpTest"/>
         </classes>
     </test>
 

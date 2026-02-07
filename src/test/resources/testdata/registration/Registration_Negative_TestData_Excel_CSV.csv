@@ -1,0 +1,6 @@
+TC_ID,signupName,signupEmail,Title,Password,d,m,y,FirstName,LastName,Company ,Address1,Country,State,City,Zip,Mobile
+REG_PO_01,Rahul,rahul_autodf_01@test.com,Mr,Test@123,19,June,2002,Rahul,Sharma,baja,"MG Road, Delhi",India,Delhi,Delhi,110001,9876543210
+REG_PO_02,Neha,neha_autodf_02@test.com,Mrs,Test@123,7,January,2000,Neha,Verma,Crompton,Civil Lines,India,MH,Pune,411001,8888888888
+REG_PO_03,Rohan,rohan_dfauto_03@test.com,Mr,Test@123,15,March,2001,Rohan,Patil,tesla,Station Road,India,MH,Mumbai,400001,7777777777
+REG_PO_04,Pooja,pooja_adfuto_04@test.com,Mrs,Test@123,22,July,1999,Pooja,Singh,netflix,Green Park,India,Delhi,Delhi,110016,6666666666
+REG_PO_05,Aman,aman_autdfo_05@test.com,Mr,Test@123,3,December,1998,Aman,Kumar,oppo,Cyber City,India,HR,Gurgaon,122001,9999999999
