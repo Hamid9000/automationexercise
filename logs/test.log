@@ -10997,3 +10997,75 @@ Caused by: java.lang.RuntimeException: CSV file NOT found in resources: testdata
 2026-02-09 13:50:05 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_04 =====
 2026-02-09 13:50:12 INFO  c.a.t.s.SignUpTest - Using unique email: neha011770625212378@test.com
 2026-02-09 13:50:14 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_04
+2026-02-09 15:15:29 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:25:09 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:26:37 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:27:25 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:29:11 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:30:38 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:30:40 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:34:05 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:35:12 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:35:34 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:38:45 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:38:48 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-09 15:38:53 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770631733838@test.com
+2026-02-09 15:38:55 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-09 15:38:56 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-09 15:39:01 INFO  c.a.t.s.SignUpTest - Using unique email: pooja011770631741523@test.com
+2026-02-09 15:39:03 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_02
+2026-02-09 15:39:04 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_03 =====
+2026-02-09 15:39:09 INFO  c.a.t.s.SignUpTest - Using unique email: rakesh011770631749180@test.com
+2026-02-09 15:39:10 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_03
+2026-02-09 15:39:11 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_04 =====
+2026-02-09 15:39:55 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-09 15:39:58 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-09 15:40:04 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770631804008@test.com
+2026-02-09 15:40:05 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-09 15:40:07 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-09 15:40:13 INFO  c.a.t.s.SignUpTest - Using unique email: pooja011770631813491@test.com
+2026-02-09 15:40:15 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_02
+2026-02-09 15:40:16 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_03 =====
+2026-02-09 15:40:21 INFO  c.a.t.s.SignUpTest - Using unique email: rakesh011770631821725@test.com
+2026-02-09 15:40:23 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_03
+2026-02-09 15:40:24 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_04 =====
+2026-02-09 15:40:34 INFO  c.a.t.s.SignUpTest - Using unique email: neha011770631834551@test.com
+2026-02-09 15:40:35 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_04
+2026-02-09 15:40:37 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-09 15:40:41 INFO  c.a.t.s.SignUpTest - Using unique email: dswd1770631841282@gmail.com
+2026-02-09 15:40:42 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-09 15:40:43 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-09 15:40:50 INFO  c.a.t.s.SignUpTest - Using unique email: dsdsdwd1770631850210@gmail.com
+2026-02-09 15:40:51 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_02
+2026-02-09 15:40:53 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_03 =====
+2026-02-09 15:40:58 INFO  c.a.t.s.SignUpTest - Using unique email: dswddddd1770631858628@gmail.com
+2026-02-09 15:41:00 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_03
+2026-02-09 15:41:01 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_04 =====
+2026-02-09 15:41:08 INFO  c.a.t.s.SignUpTest - Using unique email: dssddwd1770631868223@gmail.com
+2026-02-09 15:41:10 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_04
+2026-02-09 15:41:11 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_05 =====
+2026-02-09 15:41:16 INFO  c.a.t.s.SignUpTest - Using unique email: dswd1770631876974@gmail.com

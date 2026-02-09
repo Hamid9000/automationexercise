@@ -6,7 +6,7 @@ import com.aswesomeQA.pages.HomePage;
 import com.aswesomeQA.pages.SignUpPage;
 import com.aswesomeQA.utils.PropertiesReader;
 
-import com.aswesomeQA.utils.TestDataProvidersCSV;
+
 import com.aswesomeQA.utils.TestDataProvidersSQL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -22,8 +22,8 @@ public class SignUpTest extends CommonToAllTest {
     // =============================================================
 
     @Test(
-            dataProvider = "signupNegativeTestDataCSV",
-            dataProviderClass = TestDataProvidersCSV.class,   // ← fixed package here too
+            dataProvider = "signupNegativeTestDataSQL",
+            dataProviderClass = TestDataProvidersSQL.class,   // ← fixed package here too
             priority = 1,
             description = "Verify error messages for invalid/empty signup inputs"
     )

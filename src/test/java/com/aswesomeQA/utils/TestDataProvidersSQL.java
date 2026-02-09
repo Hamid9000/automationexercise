@@ -6,6 +6,12 @@ public class TestDataProvidersSQL {
 
     @DataProvider(name = "signupPositiveTestDataSQL")
     public Object[][] signupPositiveTestData() {
-        return SQLReader.getSignupPositiveData();
+        return SQLReader.getTestData("signup.positive.query");
     }
+
+    @DataProvider(name = "signupNegativeTestDataSQL")
+    public Object[][] signupNegativeTestData() {
+        return SQLReader.getTestData("signup.negative.query");
+    }
+
 }
