@@ -16,9 +16,8 @@ public class SignUpPage extends CommonToAllPage {
 
     private By emailAddress =
             By.xpath("//div[@class='signup-form']//input[@name='email']");
-    private By signUpBtn =
+    private By signupBtn =
             By.xpath("//button[@data-qa='signup-button']");
-
 
 
     private By accountInformationHeader =
@@ -30,14 +29,12 @@ public class SignUpPage extends CommonToAllPage {
     private By newUserSignUpHeader =
             By.xpath("//h2[normalize-space()='New User Signup!']");
 
-
+    // ---------------------- Driver --------------------
 
     public SignUpPage(WebDriver driver) {
         super(driver);
         waitForVisible(newUserSignUpHeader);
     }
-
-
 
     // ---------------------- Actions --------------------
 
@@ -50,10 +47,10 @@ public class SignUpPage extends CommonToAllPage {
         waitForVisible(emailAddress).clear();
         waitForVisible(emailAddress).sendKeys(email);
     }
-
-    public void clickSignUp() {
-        waitForClickable(signUpBtn).click();
+    public void clickSignupBtn() {
+        waitForClickable(signupBtn).click();
     }
+
 
     // ---------------------- Getters / Verifications --------------------
 
@@ -65,7 +62,6 @@ public class SignUpPage extends CommonToAllPage {
         return waitForVisible(emailAlreadyExistError).getText();
     }
 
-    // ======= LOCATOR GETTERS (NEW — FOR COMMON VALIDATION METHOD) =======
 
     public By getNameField() {
         return name;
@@ -75,16 +71,34 @@ public class SignUpPage extends CommonToAllPage {
         return emailAddress;
     }
 
+    // ---------------------- Navigation --------------------
+
 
     public RegistrationPage clickSignUpAndGoToRegistration() {
 
-        waitForClickable(signUpBtn).click();
+        waitForClickable(signupBtn).click();
 
-        // 👉 Wait for Registration FORM page (correct)
         waitForVisible(accountInformationHeader);
 
         return new RegistrationPage(getDriver());
     }
+    // ====================== REUSABLE COMPLETE SIGNUP FLOW ======================
+
+    public RegistrationPage completeSignUp(
+            String name,
+            String email
+    ) {
+
+        // 1️⃣ Enter name
+        enterUsername(name);
+
+        // 2️⃣ Enter email
+        enterEmailAddress(email);
+
+        // 3️⃣ Click Signup button and go to Registration page
+        return clickSignUpAndGoToRegistration();
+    }
+
 
 
 }

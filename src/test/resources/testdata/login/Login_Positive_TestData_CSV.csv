@@ -1,0 +1,4 @@
+
+TC_ID,Name,Email,Title,Password,Day,Month,Year,FirstName,LastName,Company,Address1,Country,State,City,Zip,Mobile
+LOGIN_POS_01,AutoUser1,userd1wed@test.com,Mr,Test@123,5,November,2005,Hamid,Sheikh,QA Labs,Nagpur,India,Maharashtra,Nagpur,440001,9999999999
+LOGIN_POS_02,AutoUser2,usdwsewdwr2@test.com,Mrs,Test@456,10,May,1998,Rahul,Sharma,Tech Corp,Pune,India,Maharashtra,Pune,411001,8888888888

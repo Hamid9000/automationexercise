@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\src\test\resources\testdata\login\Login_Negative_TestData_CSV.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\resources\testdata\login\Login_Positive_TestData_CSV.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\src\test\resources\testdata\registration\Registration_Negative_TestData_Excel_CSV.csv">
           <value>
             <Attribute>
@@ -11,6 +25,20 @@
           </value>
         </entry>
         <entry key="\src\test\resources\testdata\registration\Registration_Positive_TestData_Excel_CSV.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\resources\testdata\signup\Signup_Negative_TestData_CSV.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\src\test\resources\testdata\signup\Signup_Positive_TestData_CSV.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

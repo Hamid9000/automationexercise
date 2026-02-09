@@ -4,13 +4,13 @@ import org.testng.annotations.DataProvider;
 
 public class TestDataProvidersCSV {
 
-    // -------- REGISTRATION DATA --------
+    // ===================== REGISTRATION DATA =====================
 
     @DataProvider(name = "registrationPositiveTestDataCSV")
     public Object[][] registrationPositiveCsvData() {
 
         String resourcePath =
-                "testdata/registration/Registration_Positive_TestData_Excel_CSV.csv";
+                "testdata/registration/Registration_Positive_TestData_CSV.csv";
 
         return CSVReader.readCsvFromResources(resourcePath);
     }
@@ -19,12 +19,12 @@ public class TestDataProvidersCSV {
     public Object[][] registrationNegativeCsvData() {
 
         String resourcePath =
-                "testdata/registration/Registration_Negative_TestData_Excel_CSV.csv";
+                "testdata/registration/Registration_Negative_TestData_CSV.csv";
 
         return CSVReader.readCsvFromResources(resourcePath);
     }
 
-    // -------- SIGNUP DATA (CORRECTED PATHS) --------
+    // ===================== SIGNUP DATA =====================
 
     @DataProvider(name = "signupPositiveTestDataCSV")
     public Object[][] signupPositiveCsvData() {
@@ -42,5 +42,36 @@ public class TestDataProvidersCSV {
                 "testdata/signup/Signup_Negative_TestData_CSV.csv";
 
         return CSVReader.readCsvFromResources(resourcePath);
+    }
+
+    // ===================== LOGIN DATA  =====================
+
+    @DataProvider(name = "loginNegativeTestDataCSV")
+    public Object[][] loginNegativeCsvData() {
+
+        String resourcePath =
+                "testdata/login/Login_Negative_TestData_CSV.csv";
+
+        return CSVReader.readCsvFromResources(resourcePath);
+    }
+
+    @DataProvider(name = "loginPositiveTestDataCSV")
+    public Object[][] loginPositiveCsvData() {
+
+        String resourcePath =
+                "testdata/login/Login_Positive_TestData_CSV.csv";
+
+        return CSVReader.readCsvFromResources(resourcePath);
+    }
+    public class RegistrationDataProvider {
+
+        @DataProvider(name = "completeRegistrationData")
+        public Object[][] completeRegistrationData() {
+
+            String resourcePath =
+                    "testdata/registration/Complete_Registration_Data.csv";
+
+            return CSVReader.readCsvFromResources(resourcePath);
+        }
     }
 }

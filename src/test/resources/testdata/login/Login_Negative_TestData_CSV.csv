@@ -1,0 +1,7 @@
+TC_ID,Email,Password,Expected_Error
+LOGIN_NEG_01,,Test@123,Please fill out this field.
+LOGIN_NEG_02,testmail,Test@123,Please include an '@' in the email address. 'testmail' is missing an '@'.
+LOGIN_NEG_03,wrong@mail.com,wrong123,Your email or password is incorrect!
+LOGIN_NEG_04,wrong@mail.com,,Please fill out this field.
+LOGIN_NEG_05,@gmail.com,Test@123,Please enter a part followed by '@'
+LOGIN_NEG_06,abc@,Test@123,Please enter a part following '@'

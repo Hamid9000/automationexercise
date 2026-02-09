@@ -5,133 +5,121 @@ import com.aswesomeQA.driver.DriverManager;
 import com.aswesomeQA.pages.HomePage;
 import com.aswesomeQA.pages.SignUpPage;
 import com.aswesomeQA.utils.PropertiesReader;
-import com.aswesomeQA.utils.TestDataProvidersCSV;   // <-- FIXED IMPORT
 
+import com.aswesomeQA.utils.TestDataProvidersCSV;
+import com.aswesomeQA.utils.TestDataProvidersSQL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 public class SignUpTest extends CommonToAllTest {
 
     private static final Logger logger =
             LoggerFactory.getLogger(SignUpTest.class);
 
-    // =====================================================
-    // Negative TEST CASE
-    // =====================================================
+    // =============================================================
+    //                 NEGATIVE SIGNUP TESTS
+    // =============================================================
 
     @Test(
             dataProvider = "signupNegativeTestDataCSV",
-            dataProviderClass = TestDataProvidersCSV.class,
-            priority = 1
+            dataProviderClass = TestDataProvidersCSV.class,   // ← fixed package here too
+            priority = 1,
+            description = "Verify error messages for invalid/empty signup inputs"
     )
-
     public void invalidSignUpTest(
             String tcId,
             String name,
             String email,
-            String expectedResult
+            String expectedErrorMessageKey
     ) {
-
-        logger.info("========== STARTING NEGATIVE TEST: {} ==========", tcId);
+        logger.info("===== Starting NEGATIVE test: {} =====", tcId);
 
         HomePage home = new HomePage(DriverManager.getDriver());
         home.goToHomePage();
 
-        SignUpPage signUp = home.clickSignUpLogin();
+        SignUpPage signUpPage = home.goToSignUpPage();
 
-        logger.info("Entering Name: {}", name);
-        signUp.enterUsername(name);
+        logger.info("Name: '{}', Email: '{}'", name, email);
 
-        logger.info("Entering Email: {}", email);
-        signUp.enterEmailAddress(email);
+        signUpPage.enterUsername(name);
+        signUpPage.enterEmailAddress(email);
+        signUpPage.clickSignupBtn();
 
-        logger.info("Clicking Signup button");
-        signUp.clickSignUp();
-
-        String actualError;
+        String actualValidationMsg;
 
         if (name == null || name.trim().isEmpty()) {
-            actualError = signUp.getValidationMessage(signUp.getNameField());
-            logger.info("Reading NAME Validation message");
+            actualValidationMsg = signUpPage.getHtml5ValidationMessage(
+                    signUpPage.getNameField()
+            );
+            logger.info("Reading NAME validation message");
         } else {
-            actualError = signUp.getValidationMessage(signUp.getEmailField());
-            logger.info("Reading EMAIL field Validation message");
+            actualValidationMsg = signUpPage.getHtml5ValidationMessage(
+                    signUpPage.getEmailField()
+            );
+            logger.info("Reading EMAIL validation message");
         }
 
-        logger.info("Expected Error from Excel : {}", expectedResult);
-        logger.info("Actual Error from UI      : {}", actualError);
+        String expectedError = PropertiesReader.readKeys(expectedErrorMessageKey);
+
+        logger.info("Expected error : {}", expectedError);
+        logger.info("Actual error   : {}", actualValidationMsg);
 
         Assert.assertTrue(
-                actualError.contains(expectedResult),
-                "HTML5 validation failed for " + tcId
+                actualValidationMsg.contains(expectedError),
+                String.format(
+                        "[%s] Validation mismatch! Expected contains: '%s' | Actual: '%s'",
+                        tcId, expectedError, actualValidationMsg
+                )
         );
 
-        logger.info("========== END NEGATIVE TEST: {} ==========", tcId);
+        logger.info("Negative test passed → {}", tcId);
     }
 
-    // =====================================================
-    // POSITIVE TEST CASE
-    // =====================================================
+    // =============================================================
+    //                 POSITIVE SIGNUP TEST
+    // =============================================================
 
     @Test(
-            dataProvider = "signupPositiveTestDataCSV",
-            dataProviderClass = TestDataProvidersCSV.class,
-            priority = 2
+            dataProvider = "signupPositiveTestDataSQL",
+            dataProviderClass = TestDataProvidersSQL.class,   // ← fixed here
+            priority = 2,
+            description = "Verify successful signup with valid data"
     )
     public void validSignUpTest(
             String tcId,
             String name,
             String email
     ) {
-
-        logger.info("========== STARTING POSITIVE TEST: {} ==========", tcId);
+        logger.info("===== Starting POSITIVE test: {} =====", tcId);
 
         HomePage home = new HomePage(DriverManager.getDriver());
         home.goToHomePage();
 
-        SignUpPage signUp = home.clickSignUpLogin();
+        SignUpPage signUpPage = home.goToSignUpPage();
 
-        logger.info("Entering Valid Name: {}", name);
-        signUp.enterUsername(name);
+        signUpPage.enterUsername(name);
 
-        logger.info("Entering Valid Email: {}", email);
-        signUp.enterEmailAddress(email);
+        // Unique email for each run
+        String uniqueEmail = email.replace("@", System.currentTimeMillis() + "@");
 
-        logger.info("Clicking Signup button");
-        signUp.clickSignUp();
+        logger.info("Using unique email: {}", uniqueEmail);
+        signUpPage.enterEmailAddress(uniqueEmail);
 
-        String expectedTitle =
-                PropertiesReader.readKeys("expected.signup.title");
+        signUpPage.clickSignupBtn();
 
-        String expectedHeader =
-                PropertiesReader.readKeys("expected.signup.header");
+        String expectedTitle = PropertiesReader.readKeys("expected.signup.title");
+        String expectedHeader = PropertiesReader.readKeys("expected.signup.header");
 
-        String actualTitle = signUp.getPageTitle();
-        String actualHeader = signUp.getAccountInformationHeader();
+        String actualTitle = signUpPage.getPageTitle();
+        String actualHeader = signUpPage.getAccountInformationHeader();
 
-        logger.info("Verifying Page Title");
-        logger.info("Expected Title : {}", expectedTitle);
-        logger.info("Actual Title   : {}", actualTitle);
+        Assert.assertEquals(actualTitle, expectedTitle,
+                "Page title mismatch → " + tcId);
 
-        Assert.assertEquals(
-                actualTitle,
-                expectedTitle,
-                "Title mismatch for " + tcId
-        );
+        Assert.assertEquals(actualHeader, expectedHeader,
+                "Header mismatch → " + tcId);
 
-        logger.info("Verifying Signup Header");
-        logger.info("Expected Header : {}", expectedHeader);
-        logger.info("Actual Header   : {}", actualHeader);
-
-        Assert.assertEquals(
-                actualHeader,
-                expectedHeader,
-                "Header mismatch for " + tcId
-        );
-
-        logger.info("Positive signup passed for {}", tcId);
-        logger.info("========== END POSITIVE TEST: {} ==========", tcId);
+        logger.info("Positive signup test passed → {}", tcId);
     }
 }

@@ -7,10 +7,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-
 public class RegistrationPage extends CommonToAllPage {
 
-    //------------------------------ LOCATORS -----------------------------------
+
+// ------------------------------ LOCATORS -----------------------------------
 
     private By mr = By.id("id_gender1");
     private By mrs = By.id("id_gender2");
@@ -37,33 +37,24 @@ public class RegistrationPage extends CommonToAllPage {
     private By subscribeBtn = By.id("subscribe");
     private By accountCreatedHeader =
             By.xpath("//h2[@data-qa='account-created']");
-
     private By accountCreatedcontinueBtn =
             By.xpath("//a[@data-qa='continue-button']");
     private By logoutBtn = By.xpath("//a[contains(normalize-space(),'Logout')]");
     private By deleteAccountBtn =
             By.xpath("//a[contains(@href,'delete_account')]");
-
     private By deleteAccountMsg = By.xpath("//h2[@data-qa='account-deleted']");
-    private By accountDelteContinueBtn = By.xpath("//a[@data-qa='continue-button']");
+    private By accountDelteContinueBtn =
+            By.xpath("//a[@data-qa='continue-button']");
 
 
+// ------------------------------ DRIVER -----------------------------------
 
-    public RegistrationPage(WebDriver driver) {   // 🔥 MUST HAVE
+    public RegistrationPage(WebDriver driver) {
         super(driver);
     }
 
 
-    // ---------------------- NAVIGATION --------------------------------------
-
-    public void goToRegistrationPage() {
-        getDriver().get(
-                PropertiesReader.readKeys("baseUrl")
-                        + PropertiesReader.readKeys("regUrl")
-        );
-    }
-
-    // ------------------------ ACTION METHODS --------------------------------
+// ------------------------------ ACTION METHODS -----------------------------------
 
     public void selectMr() {
         waitForVisible(mr).click();
@@ -82,11 +73,10 @@ public class RegistrationPage extends CommonToAllPage {
 
         WebElement emailBox = waitForVisible(emailField);
 
-        if (emailBox.isEnabled()) {   // <-- IMPORTANT CHECK
+        if (emailBox.isEnabled()) {
             emailBox.clear();
             emailBox.sendKeys(userEmail);
         }
-        // else -> do nothing (because site locks email)
     }
 
     public void enterPassword(String pwd) {
@@ -104,20 +94,6 @@ public class RegistrationPage extends CommonToAllPage {
         new Select(waitForVisible(year)).selectByVisibleText(cleanYear);
     }
 
-    // --------- FILTER METHOD (MOST IMPORTANT) ----------
-    private String normalizeNumber(String value) {
-
-        if (value == null) return "";
-
-        // Remove .0, spaces, and trailing decimals
-        value = value.trim();
-
-        if (value.contains(".")) {
-            value = value.substring(0, value.indexOf("."));
-        }
-
-        return value;
-    }
 
     public void checkNewsletter() {
         if (!waitForVisible(newsletter).isSelected()) {
@@ -181,8 +157,9 @@ public class RegistrationPage extends CommonToAllPage {
 
     public HomePage clickAccountDeleteContinueBtn() {
         waitForClickable(accountDelteContinueBtn).click();
-        return new HomePage(getDriver());   // VERY IMPORTANT
+        return new HomePage(getDriver());
     }
+
     public void clickLogoutBtn(){
         waitForVisible(logoutBtn).click();
     }
@@ -191,12 +168,6 @@ public class RegistrationPage extends CommonToAllPage {
         waitForClickable(deleteAccountBtn).click();
     }
 
-
-
-
-
-    // -------- OPTIONAL: SUBSCRIPTION FOOTER --------
-
     public void enterSubscribeEmail(String email) {
         waitForVisible(subscribeEmail).sendKeys(email);
     }
@@ -204,39 +175,106 @@ public class RegistrationPage extends CommonToAllPage {
     public void clickSubscribe() {
         waitForVisible(subscribeBtn).click();
     }
-    // -------- LOCATOR GETTERS FOR VALIDATION (ADD THIS) --------
-
-    public By getAddress1Field() {
-        return address1;
-    }
-
-    public By getMobileField() {
-        return mobileNumber;
-    }
-
-    public By getNameField() {
-        return nameField;
-    }
-
-    public By getEmailField() {
-        return emailField;
-    }
 
 
-    // ----------- Verification -----------
+// ------------------------------ VERIFICATION -----------------------------------
+
     public String getPageTitle() {
         return getDriver().getTitle();
     }
 
-
     public String getAccountCreatedHeader() {
         return waitForVisible(accountCreatedHeader).getText();
     }
+
     public String getAccountDeleteMsg(){
         return waitForVisible(deleteAccountMsg).getText();
     }
 
 
+// ------------------------------ NAVIGATION -----------------------------------
+
+    public void goToRegistrationPage() {
+        getDriver().get(
+                PropertiesReader.readKeys("baseUrl")
+                        + PropertiesReader.readKeys("regUrl")
+        );
+    }
+// ------------------------------ Helper Method -----------------------------------
+
+    public void completeRegistration(
+            String title,
+            String password,
+            String d, String m, String y,
+            String firstName,
+            String lastName,
+            String company,
+            String address1,
+            String country,
+            String state,
+            String city,
+            String zip,
+            String mobile
+    ) {
+
+        // --------- STEP 1: TITLE (CLICK ACTION INCLUDED) ---------
+        if (title.equalsIgnoreCase("Mr")) {
+            waitForVisible(mr).click();      // 👈 CLICK explicitly
+        } else {
+            waitForVisible(mrs).click();     // 👈 CLICK explicitly
+        }
+
+        // --------- STEP 2: REST OF FORM ---------
+        enterPassword(password);
+        selectDOB(d, m, y);
+        checkNewsletter();
+        checkOffers();
+
+        enterFirstName(firstName);
+        enterLastName(lastName);
+        enterCompany(company);
+        enterAddress1(address1);
+
+        selectCountry(country);
+        enterState(state);
+        enterCity(city);
+        enterZip(zip);
+        enterMobile(mobile);
+
+        // --------- STEP 3: SUBMIT ---------
+        clickCreateAccount();
+    }
+    public HomePage completeRegistrationAndReturnHome(
+            String title,
+            String password,
+            String d, String m, String y,
+            String firstName,
+            String lastName,
+            String company,
+            String address1,
+            String country,
+            String state,
+            String city,
+            String zip,
+            String mobile
+    ) {
+
+        // 👉 CALL YOUR EXISTING METHOD (UNCHANGED)
+        completeRegistration(
+                title, password, d, m, y,
+                firstName, lastName, company,
+                address1, country, state, city, zip, mobile
+        );
+
+        // 👉 CLICK CONTINUE AFTER ACCOUNT CREATED
+        clickAccountCreateContinueBtn();
+
+        // 👉 WAIT FOR HOME PAGE (SAFE STEP)
+        waitForVisible(By.xpath("//img[@alt='Website for automation practice']"));
+
+        // 👉 RETURN HOME PAGE
+        return new HomePage(getDriver());
+    }
 
 
 }

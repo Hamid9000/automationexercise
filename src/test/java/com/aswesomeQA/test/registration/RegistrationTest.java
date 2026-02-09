@@ -9,13 +9,9 @@ import com.aswesomeQA.utils.PropertiesReader;
 import com.aswesomeQA.utils.TestDataProvidersCSV;
 
 import org.testng.Assert;
-
-
 import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-
 
 public class RegistrationTest extends CommonToAllTest {
 
@@ -23,7 +19,7 @@ public class RegistrationTest extends CommonToAllTest {
             LoggerFactory.getLogger(RegistrationTest.class);
 
     // =====================================================
-    // PART–1 : NEGATIVE REGISTRATION TEST (CORRECTED)
+    // PART–1 : NEGATIVE REGISTRATION TEST
     // =====================================================
     @Test(
             dataProvider = "registrationNegativeTestDataCSV",
@@ -52,42 +48,34 @@ public class RegistrationTest extends CommonToAllTest {
 
         logger.info("========== STARTING TEST: {} ==========", tcId);
 
-        // -------- CORRECT NAVIGATION (NEW) --------
         HomePage home = new HomePage(DriverManager.getDriver());
         home.goToHomePage();
 
-        SignUpPage signUpPage = home.clickSignUpLogin();
-        // -----------------------------------------
+        // ✅ ONLY THIS LINE CHANGED
+        SignUpPage signUpPage = home.goToSignUpPage();
 
         signUpPage.enterUsername(signupName);
         signUpPage.enterEmailAddress(signupEmail);
 
-        // -------- REGISTRATION PAGE --------
         RegistrationPage reg =
                 signUpPage.clickSignUpAndGoToRegistration();
 
-        // Title
         if (title.equalsIgnoreCase("Mr")) {
             reg.selectMr();
         } else {
             reg.selectMrs();
         }
 
-        // Basic details
         reg.enterPassword(password);
         reg.selectDOB(d, m, y);
         reg.checkNewsletter();
         reg.checkOffers();
 
-        // Address details
         reg.enterFirstName(firstName);
         reg.enterLastName(lastName);
         reg.enterCompany(company);
-
-        // Address1 required
         reg.enterAddress1(address1);
 
-        // Address2 intentionally skipped
         logger.info("Skipping Address2 intentionally (optional field)");
 
         reg.selectCountry(country);
@@ -96,11 +84,8 @@ public class RegistrationTest extends CommonToAllTest {
         reg.enterZip(zip);
         reg.enterMobile(mobile);
 
-        // -------- SUBMIT FORM --------
         logger.info("Clicking Create Account button");
         reg.clickCreateAccount();
-
-        // -------- VERIFICATION --------
 
         String actualPageTitle = reg.getPageTitle();
         String expectedPageTitle =
@@ -128,104 +113,10 @@ public class RegistrationTest extends CommonToAllTest {
         logger.info("========== END TEST: {} ==========", tcId);
     }
 
-// =====================================================
-// PART–2 : POSITIVE REGISTRATION TEST (CORRECTED)
-// =====================================================
+    // =====================================================
+    // PART–2 : POSITIVE REGISTRATION + DELETE TEST
+    // =====================================================
 
-    //    @Test(
-//            dataProvider = "registrationPositiveData",
-//            dataProviderClass = TestDataProviders.class,
-//            priority = 2
-//    )
-//    public void positiveRegistrationTest(
-//            String tcId,
-//            String title,
-//            String name,
-//            String email,
-//            String password,
-//            String firstName,
-//            String lastName,
-//            String address1,
-//            String country,
-//            String state,
-//            String city,
-//            String zip,
-//            String mobile,
-//            String expectedResult
-//    ) {
-//
-//        // Skip any negative rows accidentally present
-//        if (!expectedResult.contains("ACCOUNT")) {
-//            Reporter.log("Skipping non-positive row: " + tcId, true);
-//            return;
-//        }
-//
-//        Reporter.log("===== START POSITIVE TEST : " + tcId + " =====", true);
-//
-//        RegistrationPage reg = new RegistrationPage();
-//        reg.goToRegistrationPage();
-//
-//        // ---- Fill the form correctly ----
-//        if (title.equalsIgnoreCase("Mr")) {
-//            reg.selectMr();
-//        } else {
-//            reg.selectMrs();
-//        }
-//
-//        reg.enterName(name);
-//        reg.enterEmail(email);
-//        reg.enterPassword(password);
-//
-//        // DOB from test data is optional; keeping sample format
-//        reg.selectDOB("10", "May", "1998");
-//
-//        reg.checkNewsletter();
-//
-//        reg.enterFirstName(firstName);
-//        reg.enterLastName(lastName);
-//        reg.enterAddress1(address1);
-//        reg.selectCountry(country);
-//        reg.enterState(state);
-//        reg.enterCity(city);
-//        reg.enterZip(zip);
-//        reg.enterMobile(mobile);
-//
-//        Reporter.log("Clicking Create Account", true);
-//        reg.clickCreateAccount();
-//
-//        // ---------- VERIFICATIONS FROM properties FILE ----------
-//
-//        String actualTitle = reg.getCurrentTitle();
-//        String actualHeader = reg.getAccountCreatedHeader();
-//
-//        String expectedTitle =
-//                PropertiesReader.readData("expected.account.page.title");
-//
-//        String expectedHeader =
-//                PropertiesReader.readData("expected.account.header");
-//
-//        Reporter.log("Actual Title: " + actualTitle, true);
-//        Reporter.log("Expected Title: " + expectedTitle, true);
-//
-//        Reporter.log("Actual Header: " + actualHeader, true);
-//        Reporter.log("Expected Header: " + expectedHeader, true);
-//
-//        Assert.assertEquals(
-//                actualTitle,
-//                expectedTitle,
-//                "Page Title mismatch after registration"
-//        );
-//
-//        Assert.assertEquals(
-//                actualHeader,
-//                expectedHeader,
-//                "Account created message mismatch"
-//        );
-//
-//        Reporter.log("===== END POSITIVE TEST : " + tcId + " =====", true);
-//    }
-//
-//}
     @Test(
             dataProvider = "registrationPositiveTestDataCSV",
             dataProviderClass = TestDataProvidersCSV.class,
@@ -253,25 +144,14 @@ public class RegistrationTest extends CommonToAllTest {
 
         logger.info("===== STARTING POSITIVE TEST + DELETE FLOW: {} =====", tcId);
 
-        // ==============================
-        //  STEP 1: OPEN APPLICATION
-        // ==============================
-
         HomePage home = new HomePage(DriverManager.getDriver());
         home.goToHomePage();
 
-        // ==============================
-        //  STEP 2: NAVIGATE TO SIGNUP PAGE
-        // ==============================
-
-        SignUpPage signUpPage = home.clickSignUpLogin();
+        // ✅ ONLY THIS LINE CHANGED
+        SignUpPage signUpPage = home.goToSignUpPage();
 
         signUpPage.enterUsername(signupName);
         signUpPage.enterEmailAddress(signupEmail);
-
-        // ==============================
-        //  STEP 3: FILL REGISTRATION FORM
-        // ==============================
 
         RegistrationPage reg =
                 signUpPage.clickSignUpAndGoToRegistration();
@@ -300,16 +180,8 @@ public class RegistrationTest extends CommonToAllTest {
         reg.enterZip(zip);
         reg.enterMobile(mobile);
 
-        // ==============================
-        //  STEP 4: CREATE ACCOUNT
-        // ==============================
-
         logger.info("Clicking Create Account");
         reg.clickCreateAccount();
-
-        // ==============================
-        //  STEP 5: VERIFY ACCOUNT CREATED
-        // ==============================
 
         String actualHeader = reg.getAccountCreatedHeader();
         String expectedHeader =
@@ -324,25 +196,17 @@ public class RegistrationTest extends CommonToAllTest {
 
         reg.clickAccountCreateContinueBtn();
 
-        // ==============================
-        //  STEP 6: DELETE ACCOUNT
-        // ==============================
-
         logger.info("Clicking Delete Account");
         reg.clickDeleteAccount();
 
-        String actualDeleteAccountDeleteMsg = reg.getAccountDeleteMsg();
-        String expectedDeleteAccountDeletemsg =
+        String actualDeleteMsg = reg.getAccountDeleteMsg();
+        String expectedDeleteMsg =
                 PropertiesReader.readKeys("expected.accountDeleteMsg");
 
         Assert.assertTrue(
-                actualDeleteAccountDeleteMsg.contains(expectedDeleteAccountDeletemsg),
+                actualDeleteMsg.contains(expectedDeleteMsg),
                 "Account was NOT deleted!"
         );
-
-        // ==============================
-        //  STEP 7: NAVIGATE BACK TO HOME + VERIFY
-        // ==============================
 
         HomePage homeAfterDelete = reg.clickAccountDeleteContinueBtn();
 

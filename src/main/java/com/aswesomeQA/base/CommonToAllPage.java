@@ -9,27 +9,32 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-
-
 public class CommonToAllPage {
+
+
+    // -------------------------- DRIVER MANAGEMENT -------------------------
+
+
     protected WebDriver driver;
 
-    public CommonToAllPage(WebDriver driver){
+    public CommonToAllPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    public WebDriver getDriver(){
+    public WebDriver getDriver() {
         return driver;
     }
 
 
-    public void openUrl() {
-        getDriver().get(PropertiesReader.readKeys("baseUrl"));
-    }
+    // --------------------------  WAIT CONFIGURATION  -------------------------
+
 
     private WebDriverWait getWait() {
         return new WebDriverWait(getDriver(), Duration.ofSeconds(15));
     }
+
+    // --------------------------  ELEMENT WAIT HELPERS -------------------------
+
 
     public WebElement waitForVisible(By locator) {
         return getWait()
@@ -41,10 +46,20 @@ public class CommonToAllPage {
                 .until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-
     public WebElement waitForPresent(By locator) {
         return getWait()
                 .until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
+    public void waitForInvisibility(By locator) {
+        getWait().until(ExpectedConditions.invisibilityOfElementLocated(locator));
+    }
+
+
+    // --------------------------  NAVIGATION ACTIONS -------------------------
+
+    public void openUrl() {
+        getDriver().get(PropertiesReader.readKeys("baseUrl"));
     }
 
     public void waitForUrlContains(String text) {
@@ -55,15 +70,71 @@ public class CommonToAllPage {
         getWait().until(ExpectedConditions.not(ExpectedConditions.titleIs("")));
         return getDriver().getTitle();
     }
-    public String getValidationMessage(By locator) {
+
+
+    // --------------------------  VALIDATION / GETTERS -------------------------
+
+    // ------------------ HTML5 VALIDATION (GENERIC) ------------------
+
+    public String getHtml5ValidationMessage(By locator) {
         return waitForVisible(locator)
                 .getAttribute("validationMessage");
     }
-    public void waitForInvisibility(By locator) {
-        getWait().until(ExpectedConditions.invisibilityOfElementLocated(locator));
+
+    // --------------------------  NUMBER HELPER  --------------------------
+    protected String normalizeNumber(String value) {
+
+        if (value == null) return "";
+
+        value = value.trim();
+
+        if (value.contains(".")) {
+            value = value.substring(0, value.indexOf("."));
+        }
+
+        return value;
+    }
+
+    // ---------------- EMAIL VALIDATION UTILITY ----------------
+    public boolean isValidEmailFormat(String email) {
+
+        String emailRegex =
+                "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$";
+
+        return email != null && email.matches(emailRegex);
+    }
+    public String generateUniqueEmail(String prefix) {
+        return prefix + "_" + System.currentTimeMillis() + "@mailinator.com";
+    }
+    public String generateStrongPassword() {
+
+        long time = System.currentTimeMillis();
+
+        String upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String lower = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String special = "@#$%&*!";
+
+        char U = upper.charAt((int)(time % upper.length()));
+        char L = lower.charAt((int)(time % lower.length()));
+        char D = digits.charAt((int)(time % digits.length()));
+        char S = special.charAt((int)(time % special.length()));
+
+        return "" + U + L + S + "Test" + (time % 10000) + D;
     }
 
 
 
+    // -------------------------- JAVASCRIPT UTILITIES --------------------------
+// (e.g. click with JS, scroll, highlight, etc.)
+
+// -------------------------- BROWSER UTILITIES --------------------------
+// (switch tabs, alerts, windows, refresh, etc.)
+
+// -------------------------- SCREENSHOT UTILITIES --------------------------
+// (take screenshot, attach to report, etc.)
+
+// -------------------------- LOGGING UTILITIES --------------------------
+// (info, debug, error logs, etc.)
 
 }
