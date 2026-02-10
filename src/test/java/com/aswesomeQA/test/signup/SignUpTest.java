@@ -1,12 +1,8 @@
 package com.aswesomeQA.test.signup;
-
 import com.aswesomeQA.base.CommonToAllTest;
-import com.aswesomeQA.driver.DriverManager;
 import com.aswesomeQA.pages.HomePage;
 import com.aswesomeQA.pages.SignUpPage;
 import com.aswesomeQA.utils.PropertiesReader;
-
-
 import com.aswesomeQA.utils.TestDataProvidersSQL;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -35,7 +31,7 @@ public class SignUpTest extends CommonToAllTest {
     ) {
         logger.info("===== Starting NEGATIVE test: {} =====", tcId);
 
-        HomePage home = new HomePage(DriverManager.getDriver());
+        HomePage home = new HomePage();
         home.goToHomePage();
 
         SignUpPage signUpPage = home.goToSignUpPage();
@@ -93,7 +89,7 @@ public class SignUpTest extends CommonToAllTest {
     ) {
         logger.info("===== Starting POSITIVE test: {} =====", tcId);
 
-        HomePage home = new HomePage(DriverManager.getDriver());
+        HomePage home = new HomePage();
         home.goToHomePage();
 
         SignUpPage signUpPage = home.goToSignUpPage();

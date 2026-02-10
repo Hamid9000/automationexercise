@@ -1,6 +1,7 @@
 package com.aswesomeQA.tests;
 
 import com.aswesomeQA.base.CommonToAllTest;
+
 import com.aswesomeQA.pages.HomePage;
 import com.aswesomeQA.pages.LoginPage;
 import com.aswesomeQA.pages.RegistrationPage;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.aswesomeQA.driver.DriverManager.getDriver;
+
 
 public class LoginTest extends CommonToAllTest {
 
@@ -35,7 +36,7 @@ public class LoginTest extends CommonToAllTest {
         logger.info("========== STARTING NEGATIVE LOGIN TEST : {} ==========", tcId);
 
         logger.info("Step 1 → Opening Home Page");
-        HomePage homePage = new HomePage(getDriver());
+        HomePage homePage = new HomePage();
         homePage.goToHomePage();
 
         logger.info("Step 2 → Navigating to Login Page from Home");
@@ -135,7 +136,7 @@ public class LoginTest extends CommonToAllTest {
         logger.info("===== START POSITIVE LOGIN TEST : {} =====", tcid);
 
         // 1️⃣ Go to Home
-        HomePage homePage = new HomePage(getDriver());
+        HomePage homePage = new HomePage();
         homePage.goToHomePage();
 
         // 2️⃣ SIGNUP FLOW
@@ -237,7 +238,7 @@ public class LoginTest extends CommonToAllTest {
         logger.info("===== START DELETE ACCOUNT TEST : {} =====", tcid);
 
         // 1️⃣ Go to Home
-        HomePage homePage = new HomePage(getDriver());
+        HomePage homePage = new HomePage();
         homePage.goToHomePage();
 
         // 2️⃣ SIGNUP FLOW
@@ -272,7 +273,7 @@ public class LoginTest extends CommonToAllTest {
         // click continue after deletion (you may already have this button)
         afterDelete.clickContinueAfterDelete();
 
-        HomePage homeAfterDelete = new HomePage(getDriver());
+        HomePage homeAfterDelete = new HomePage();
 
         Assert.assertTrue(
                 homeAfterDelete.isSignupLoginButtonVisible(),

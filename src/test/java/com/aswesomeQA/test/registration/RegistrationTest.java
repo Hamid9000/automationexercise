@@ -1,7 +1,8 @@
 package com.aswesomeQA.test.registration;
 
+
+
 import com.aswesomeQA.base.CommonToAllTest;
-import com.aswesomeQA.driver.DriverManager;
 import com.aswesomeQA.pages.HomePage;
 import com.aswesomeQA.pages.RegistrationPage;
 import com.aswesomeQA.pages.SignUpPage;
@@ -48,7 +49,7 @@ public class RegistrationTest extends CommonToAllTest {
 
         logger.info("========== STARTING TEST: {} ==========", tcId);
 
-        HomePage home = new HomePage(DriverManager.getDriver());
+        HomePage home = new HomePage();
         home.goToHomePage();
 
         // ✅ ONLY THIS LINE CHANGED
@@ -144,7 +145,7 @@ public class RegistrationTest extends CommonToAllTest {
 
         logger.info("===== STARTING POSITIVE TEST + DELETE FLOW: {} =====", tcId);
 
-        HomePage home = new HomePage(DriverManager.getDriver());
+        HomePage home = new HomePage();
         home.goToHomePage();
 
         // ✅ ONLY THIS LINE CHANGED

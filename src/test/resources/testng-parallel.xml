@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Parallel Suite"
+       parallel="methods"
+       thread-count="2">
+
+    <test name="Signup Tests">
+        <classes>
+            <class name="com.aswesomeQA.test.signup.SignUpTest"/>
+        </classes>
+    </test>
+
+</suite>

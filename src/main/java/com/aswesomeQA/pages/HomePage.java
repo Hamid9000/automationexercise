@@ -1,38 +1,36 @@
 package com.aswesomeQA.pages;
 
 import com.aswesomeQA.base.CommonToAllPage;
-import com.aswesomeQA.driver.DriverManager;
 import com.aswesomeQA.utils.PropertiesReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class HomePage extends CommonToAllPage {
 
     // ------------------------------ LOCATORS -----------------------------------
 
-    private By homeAutomationExerciseLogo =
+    private final By homeAutomationExerciseLogo =
             By.xpath("//img[@alt='Website for automation practice']");
 
-    private By signupLoginBtn =
+    private final By signupLoginBtn =
             By.xpath("//a[contains(.,'Signup / Login')]");
 
-    private By deleteAccountBtn =
+    private final By deleteAccountBtn =
             By.xpath("//a[contains(@href,'delete_account')]");
 
-    private By logoutBtn =
+    private final By logoutBtn =
             By.xpath("//a[contains(@href,'logout')]");
 
     // ------------------------------ CONSTRUCTOR -----------------------------------
 
-    public HomePage(WebDriver driver) {
-        super(driver);
+    // ✅ Correct for parallel (no WebDriver here)
+    public HomePage() {
+        super();   // picks DriverManagerTL.getDriver() automatically
     }
 
     // ------------------------------ NAVIGATION -----------------------------------
 
     public void goToHomePage() {
-        DriverManager.getDriver()
-                .get(PropertiesReader.readKeys("baseUrl"));
+        getDriver().get(PropertiesReader.readKeys("baseUrl"));
     }
 
     // ------------------------------ ACTION METHODS -----------------------------------
@@ -40,25 +38,24 @@ public class HomePage extends CommonToAllPage {
     // 👉 For SIGNUP flow
     public SignUpPage goToSignUpPage() {
         waitForClickable(signupLoginBtn).click();
-        return new SignUpPage(getDriver());
+        return new SignUpPage();          // ✅ no driver passing
     }
 
     // 👉 For LOGIN flow
     public LoginPage goToLoginPageFromHome() {
         waitForClickable(signupLoginBtn).click();
-        return new LoginPage(getDriver());
+        return new LoginPage();           // ✅ no driver passing
     }
 
     public LoginPage clickDeleteAccountBtn() {
         waitForClickable(deleteAccountBtn).click();
-        return new LoginPage(getDriver());
+        return new LoginPage();           // ✅ no driver passing
     }
 
-
-    // ✅ CORRECT LOGOUT METHOD (USED IN YOUR TEST)
+    // ✅ Logout keeps you on HomePage
     public HomePage clickLogoutAndReturnHome() {
         waitForVisible(logoutBtn).click();
-        return new HomePage(getDriver());
+        return new HomePage();            // ✅ no driver passing
     }
 
     // ------------------------------ VERIFICATION METHODS -----------------------------------
@@ -70,9 +67,8 @@ public class HomePage extends CommonToAllPage {
     public boolean isSignupLoginButtonVisible() {
         return waitForVisible(signupLoginBtn).isDisplayed();
     }
+
     public boolean isLoggedInUserVisible() {
         return waitForVisible(logoutBtn).isDisplayed();
     }
-
-
 }

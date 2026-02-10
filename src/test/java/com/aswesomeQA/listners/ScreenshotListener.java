@@ -19,12 +19,18 @@ public class ScreenshotListener implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult result) {
+
+
+       // WebDriver driver = DriverManagerTL.getDriver();
         WebDriver driver = DriverManager.getDriver();
+
         if (driver != null) {
             try {
                 attachScreenshot(driver);
-                saveScreenshotToFolder(driver,
-                        "Failure_" + result.getMethod().getMethodName());
+                saveScreenshotToFolder(
+                        driver,
+                        "Failure_" + result.getMethod().getMethodName()
+                );
                 System.out.println("✅ Screenshot captured for FAILED test: "
                         + result.getMethod().getMethodName());
             } catch (Exception e) {
@@ -43,6 +49,7 @@ public class ScreenshotListener implements ITestListener {
     }
 
     public void saveScreenshotToFolder(WebDriver driver, String label) {
+
         File src = ((TakesScreenshot) driver)
                 .getScreenshotAs(OutputType.FILE);
 

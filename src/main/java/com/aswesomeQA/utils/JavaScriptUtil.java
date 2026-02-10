@@ -1,6 +1,5 @@
 package com.aswesomeQA.utils;
 
-import com.aswesomeQA.driver.DriverManager; // DriverManager ko import kiya
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

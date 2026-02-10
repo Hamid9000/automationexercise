@@ -1,9 +1,9 @@
 package com.aswesomeQA.pages;
 
 import com.aswesomeQA.base.CommonToAllPage;
+
 import com.aswesomeQA.utils.PropertiesReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
@@ -49,9 +49,13 @@ public class RegistrationPage extends CommonToAllPage {
 
 // ------------------------------ DRIVER -----------------------------------
 
-    public RegistrationPage(WebDriver driver) {
-        super(driver);
+
+
+    // ✅ Correct constructor for parallel execution
+    public RegistrationPage() {
+        super();   // IMPORTANT for parallel
     }
+
 
 
 // ------------------------------ ACTION METHODS -----------------------------------
@@ -157,7 +161,7 @@ public class RegistrationPage extends CommonToAllPage {
 
     public HomePage clickAccountDeleteContinueBtn() {
         waitForClickable(accountDelteContinueBtn).click();
-        return new HomePage(getDriver());
+        return new HomePage();
     }
 
     public void clickLogoutBtn(){
@@ -273,7 +277,7 @@ public class RegistrationPage extends CommonToAllPage {
         waitForVisible(By.xpath("//img[@alt='Website for automation practice']"));
 
         // 👉 RETURN HOME PAGE
-        return new HomePage(getDriver());
+        return new HomePage();
     }
 
 

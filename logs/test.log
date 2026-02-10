@@ -11069,3 +11069,300 @@ Caused by: java.lang.RuntimeException: CSV file NOT found in resources: testdata
 2026-02-09 15:41:10 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_04
 2026-02-09 15:41:11 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_05 =====
 2026-02-09 15:41:16 INFO  c.a.t.s.SignUpTest - Using unique email: dswd1770631876974@gmail.com
+2026-02-10 12:57:09 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-10 12:59:13 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-10 13:01:47 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-10 13:05:18 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-10 13:05:20 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:05:20 INFO  i.g.b.w.o.Downloader - Downloading https://storage.googleapis.com/chrome-for-testing-public/145.0.7632.46/win64/chromedriver-win64.zip
+2026-02-10 13:05:22 INFO  i.g.b.w.o.Downloader - Extracting driver from compressed file chromedriver-win64.zip
+2026-02-10 13:05:22 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:05:24 INFO  c.a.t.LoginTest - ===== START DELETE ACCOUNT TEST : LOGIN_POS_01 =====
+2026-02-10 13:05:36 INFO  c.a.t.LoginTest - Account created successfully for LOGIN_POS_01
+2026-02-10 13:05:36 INFO  c.a.t.LoginTest - Clicking Delete Account
+2026-02-10 13:05:39 INFO  c.a.t.LoginTest - Account deleted successfully for LOGIN_POS_01
+2026-02-10 13:05:39 INFO  c.a.t.LoginTest - Trying to login with deleted account
+2026-02-10 13:05:42 INFO  c.a.t.LoginTest - Verified: Deleted account cannot login for LOGIN_POS_01
+2026-02-10 13:05:42 INFO  c.a.t.LoginTest - ===== END DELETE ACCOUNT TEST : LOGIN_POS_01 =====
+2026-02-10 13:05:43 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:05:43 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:05:43 INFO  c.a.t.LoginTest - ===== START DELETE ACCOUNT TEST : LOGIN_POS_02 =====
+2026-02-10 13:06:02 INFO  c.a.t.LoginTest - Account created successfully for LOGIN_POS_02
+2026-02-10 13:06:02 INFO  c.a.t.LoginTest - Clicking Delete Account
+2026-02-10 13:06:07 INFO  c.a.t.LoginTest - Account deleted successfully for LOGIN_POS_02
+2026-02-10 13:06:07 INFO  c.a.t.LoginTest - Trying to login with deleted account
+2026-02-10 13:06:51 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:06:52 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:06:52 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:06:52 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:06:52 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:06:54 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:06:54 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:07:02 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770709022197@test.com
+2026-02-10 13:07:04 INFO  c.a.t.s.SignUpTest - Name: 'Aman Verma', Email: 'aman01@test.com'
+2026-02-10 13:07:24 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:07:24 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:07:25 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:07:28 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-10 13:07:28 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:07:28 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:07:29 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-10 13:07:34 INFO  c.a.t.s.SignUpTest - Name: 'Pooja Singh', Email: 'pooja01@test.com'
+2026-02-10 13:07:37 INFO  c.a.t.s.SignUpTest - Using unique email: pooja011770709057249@test.com
+2026-02-10 13:07:40 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_02
+2026-02-10 13:07:41 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:07:41 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:07:42 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_03 =====
+2026-02-10 13:07:51 INFO  c.a.t.s.SignUpTest - Using unique email: rakesh011770709071034@test.com
+2026-02-10 13:07:52 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_03
+2026-02-10 13:07:53 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:07:53 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:07:53 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_04 =====
+2026-02-10 13:08:03 INFO  c.a.t.s.SignUpTest - Using unique email: neha011770709083028@test.com
+2026-02-10 13:08:04 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_04
+2026-02-10 13:08:04 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:08:04 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:08:05 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:08:14 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:08:14 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:08:15 INFO  c.a.t.s.SignUpTest - Using unique email: dswd1770709095614@gmail.com
+2026-02-10 13:08:15 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_03 =====
+2026-02-10 13:08:18 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-10 13:08:18 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:08:18 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:08:34 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:08:35 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:08:35 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:08:35 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:08:35 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:08:37 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:08:37 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:08:43 INFO  c.a.t.s.SignUpTest - Name: 'Aman Verma', Email: 'aman01@test.com'
+2026-02-10 13:08:45 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770709125038@test.com
+2026-02-10 13:08:59 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:08:59 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:08:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:10:00 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:10:01 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:10:01 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:10:01 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:10:01 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:10:03 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:10:03 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:13:42 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\AppData\Local\JetBrains\IdeaIC2025.1\temp-testng-customsuite.xml
+
+2026-02-10 13:19:08 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:19:08 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:08 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:08 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:08 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:10 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:11 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:11 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:19:11 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:19:11 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:36:31 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:36:31 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:36:31 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:36:31 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:36:31 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:36:34 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:36:34 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:36:42 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770710802597@test.com
+2026-02-10 13:36:42 INFO  c.a.t.s.SignUpTest - Name: 'Aman Verma', Email: 'aman01@test.com'
+2026-02-10 13:37:19 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:37:20 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:37:20 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:37:20 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:37:20 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:37:22 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:37:22 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:37:28 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770710848740@test.com
+2026-02-10 13:37:29 INFO  c.a.t.s.SignUpTest - Name: 'Aman Verma', Email: 'aman01@test.com'
+2026-02-10 13:37:33 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-10 13:37:33 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:37:33 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:37:33 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:37:33 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:37:34 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:37:34 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:37:34 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:37:34 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-10 13:37:35 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:37:35 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:40:17 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:40:18 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:40:18 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:40:18 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:40:18 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:40:20 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:40:20 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:40:27 INFO  c.a.t.s.SignUpTest - Name: 'Aman Verma', Email: 'aman01@test.com'
+2026-02-10 13:40:31 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770711031892@test.com
+2026-02-10 13:40:33 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:40:33 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:40:34 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:40:34 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:40:36 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-10 13:40:43 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:40:43 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:40:44 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:40:44 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:40:44 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:41:06 INFO  o.t.i.Utils - [TestNG] Running:
+  C:\Users\hamid\IdeaProjects\AwesomeQA\src\test\resources\testng-parallel.xml
+
+2026-02-10 13:41:07 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:07 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:07 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:07 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:08 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:41:08 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:41:16 INFO  c.a.t.s.SignUpTest - Using unique email: aman011770711076897@test.com
+2026-02-10 13:41:18 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:18 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:18 INFO  c.a.t.s.SignUpTest - Name: 'Aman Verma', Email: 'aman01@test.com'
+2026-02-10 13:41:18 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:18 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:19 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-10 13:41:30 INFO  c.a.t.s.SignUpTest - Using unique email: pooja011770711090027@test.com
+2026-02-10 13:41:31 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_02
+2026-02-10 13:41:31 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:31 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:32 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:32 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:32 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_03 =====
+2026-02-10 13:41:36 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:36 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:36 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:36 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:37 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:41:41 INFO  c.a.t.s.SignUpTest - Using unique email: rakesh011770711101394@test.com
+2026-02-10 13:41:44 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_03
+2026-02-10 13:41:44 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:44 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:45 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:45 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:46 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_04 =====
+2026-02-10 13:41:48 INFO  c.a.t.s.SignUpTest - Name: 'Pooja Singh', Email: 'pooja01@test.com'
+2026-02-10 13:41:49 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:49 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:50 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:41:50 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:41:52 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_03 =====
+2026-02-10 13:41:56 INFO  c.a.t.s.SignUpTest - Using unique email: neha011770711116121@test.com
+2026-02-10 13:42:01 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_04
+2026-02-10 13:42:01 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:01 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:02 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:02 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:03 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_01 =====
+2026-02-10 13:42:04 INFO  c.a.t.s.SignUpTest - Name: 'Rakesh Kumar', Email: 'rakesh01@test.com'
+2026-02-10 13:42:15 INFO  c.a.t.s.SignUpTest - Using unique email: dswd1770711135355@gmail.com
+2026-02-10 13:42:16 INFO  c.a.t.s.SignUpTest - Positive signup test passed → SIGN_01
+2026-02-10 13:42:17 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:17 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:18 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:18 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:19 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_02 =====
+2026-02-10 13:42:22 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:22 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:23 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:23 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:24 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_04 =====
+2026-02-10 13:42:38 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:38 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:38 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:38 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:39 INFO  c.a.t.s.SignUpTest - ===== Starting POSITIVE test: SIGN_03 =====
+2026-02-10 13:42:43 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:43 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:43 INFO  i.g.b.w.WebDriverManager - Using chromedriver 145.0.7632.46 (resolved driver for Chrome 145)
+2026-02-10 13:42:43 INFO  i.g.b.w.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\hamid\.cache\selenium\chromedriver\win64\145.0.7632.46\chromedriver.exe
+2026-02-10 13:42:44 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_05 =====
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 8 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 1 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 1 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 2 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.collectMethodsByGroup() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] MethodGroupsHelper.sortMethods() took 0 ms.
+2026-02-10 13:47:50 INFO  o.t.i.Utils - [Utils] DynamicGraphHelper.createDynamicGraph() took 16 ms.
+2026-02-10 13:47:53 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_01 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_02 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_03 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_03 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_04 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_04 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_05 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_05 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_06 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_06 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_07 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_07 =====
+2026-02-10 13:47:58 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_08 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_08 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_09 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_09 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_10 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_10 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_11 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_11 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_12 =====
+2026-02-10 13:47:59 INFO  c.a.t.s.SignUpTest - ===== Starting NEGATIVE test: SIGN_PO_12 =====
+2026-02-10 13:47:59 INFO  o.t.i.Utils - [TestNG] Time taken by org.testng.internal.ExitCodeListener@38f617f4: 0 ms

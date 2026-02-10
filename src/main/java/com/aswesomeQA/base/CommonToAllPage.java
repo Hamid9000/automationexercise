@@ -1,5 +1,9 @@
 package com.aswesomeQA.base;
 
+
+
+import com.aswesomeQA.driver.DriverManager;
+
 import com.aswesomeQA.utils.PropertiesReader;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,10 +20,12 @@ public class CommonToAllPage {
 
 
     protected WebDriver driver;
+    public CommonToAllPage() {          // ✅ NEW NO-ARG CONSTRUCTOR
+       // this.driver = DriverManagerTL.getDriver();
+        this.driver = DriverManager.getDriver();
 
-    public CommonToAllPage(WebDriver driver) {
-        this.driver = driver;
     }
+
 
     public WebDriver getDriver() {
         return driver;

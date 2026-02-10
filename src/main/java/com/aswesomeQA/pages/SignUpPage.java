@@ -4,7 +4,8 @@ package com.aswesomeQA.pages;
 import com.aswesomeQA.base.CommonToAllPage;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
+
 
 public class SignUpPage extends CommonToAllPage {
 
@@ -30,10 +31,8 @@ public class SignUpPage extends CommonToAllPage {
             By.xpath("//h2[normalize-space()='New User Signup!']");
 
     // ---------------------- Driver --------------------
-
-    public SignUpPage(WebDriver driver) {
-        super(driver);
-        waitForVisible(newUserSignUpHeader);
+    public SignUpPage() {
+        super();   // IMPORTANT for parallel
     }
 
     // ---------------------- Actions --------------------
@@ -80,7 +79,7 @@ public class SignUpPage extends CommonToAllPage {
 
         waitForVisible(accountInformationHeader);
 
-        return new RegistrationPage(getDriver());
+        return new RegistrationPage();
     }
     // ====================== REUSABLE COMPLETE SIGNUP FLOW ======================
 

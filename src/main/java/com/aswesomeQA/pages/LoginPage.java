@@ -3,41 +3,42 @@ package com.aswesomeQA.pages;
 import com.aswesomeQA.base.CommonToAllPage;
 import com.aswesomeQA.utils.PropertiesReader;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends CommonToAllPage {
 
+    // ------------------------------ LOCATORS -----------------------------------
 
-// ------------------------------ LOCATORS -----------------------------------
-
-    private By username =
+    private final By username =
             By.xpath("//input[@data-qa='login-email']");
 
-    private By password =
-            By.xpath("//input[@data-qa='login-password']"); // ✅ corrected
+    private final By password =
+            By.xpath("//input[@data-qa='login-password']");
 
-    private By loginBtn =
-            By.cssSelector("button[data-qa='login-button']"); // ✅ corrected
-    private By invalidLoginError =
+    private final By loginBtn =
+            By.cssSelector("button[data-qa='login-button']");
+
+    private final By invalidLoginError =
             By.xpath("//p[contains(text(),'Your email or password is incorrect')]");
-    By deleteContinueBtn =
-            By.xpath("//a[@data-qa='continue-button']");   // ✅ BEST LOCATOR
 
+    final By deleteContinueBtn =
+            By.xpath("//a[@data-qa='continue-button']");
 
-
-
-    private By forgottenPassword =
+    private final By forgottenPassword =
             By.linkText("Forgotten Password");
 
+    // ------------------------------ DRIVER -----------------------------------
 
-// ------------------------------ DRIVER -----------------------------------
-
-    public LoginPage(WebDriver driver) {
-        super(driver);   // 🔥 MUST HAVE
+    // ✅ FIXED CONSTRUCTOR (parallel-safe)
+    public LoginPage() {
+        super();   // picks DriverManagerTL.getDriver() automatically
     }
 
+    // (kept for backward compatibility — safe, not used)
+    public LoginPage(org.openqa.selenium.WebDriver driver) {
+        super();
+    }
 
-// ------------------------------ ACTION METHODS -----------------------------------
+    // ------------------------------ ACTION METHODS -----------------------------------
 
     public void enterUsername(String user) {
         waitForVisible(username).clear();
@@ -57,8 +58,7 @@ public class LoginPage extends CommonToAllPage {
         waitForClickable(forgottenPassword).click();
     }
 
-// ------------------------------ LOCATOR GETTERS -----------------------------------
-// (for common validation method)
+    // ------------------------------ LOCATOR GETTERS -----------------------------------
 
     public By getUsernameField() {
         return username;
@@ -68,20 +68,17 @@ public class LoginPage extends CommonToAllPage {
         return password;
     }
 
-
-// ------------------------------ VERIFICATION -----------------------------------
+    // ------------------------------ VERIFICATION -----------------------------------
 
     public String getPageTitle() {
         return getDriver().getTitle();
     }
+
     public String getInvalidLoginError() {
         return waitForVisible(invalidLoginError).getText();
     }
 
-
-
-// ------------------------------ REWIRED / FORWARD METHOD (NEW) -------------------
-// ✅ THIS IS THE METHOD YOU ASKED FOR
+    // ------------------------------ REWIRED / FORWARD METHOD -------------------
 
     public HomePage loginAndGoToHome(String user, String pass) {
 
@@ -89,14 +86,11 @@ public class LoginPage extends CommonToAllPage {
         enterPassword(pass);
         clickLoginBtn();
 
-        // optional wait for home page if you have a locator
-        // waitForVisible(homeHeader);
-
-        return new HomePage(getDriver());
+        // ✅ FIX: return without passing driver
+        return new HomePage();
     }
 
-
-// ------------------------------ NAVIGATION (LAST) -----------------------------------
+    // ------------------------------ NAVIGATION -----------------------------------
 
     public void goToLoginPage() {
         getDriver().get(
@@ -109,7 +103,6 @@ public class LoginPage extends CommonToAllPage {
         waitForClickable(deleteContinueBtn).click();
     }
 
-
     public String getLoginErrorMessage() {
         return waitForVisible(
                 By.xpath("//p[contains(text(),'incorrect')]")
@@ -121,6 +114,4 @@ public class LoginPage extends CommonToAllPage {
         enterPassword(password);
         clickLoginBtn();
     }
-
-
 }
