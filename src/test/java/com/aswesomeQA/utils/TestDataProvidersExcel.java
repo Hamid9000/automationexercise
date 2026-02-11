@@ -6,7 +6,7 @@ public class TestDataProvidersExcel {
 
     // ---------- SIGNUP DATA ----------
 
-    @DataProvider(name = "signupNegativeTestDataCSV")
+    @DataProvider(name = "signupNegativeTestDataExcel")
     public static Object[][] signupNegativeTestData() {
         return ExcelReader.readSheet(
                 ExcelPaths.SIGNUP_NEG_FILE,
@@ -14,7 +14,7 @@ public class TestDataProvidersExcel {
         );
     }
 
-    @DataProvider(name = "signupPositiveTestDataCSV")
+    @DataProvider(name = "signupPositiveTestDataExcel")
     public static Object[][] signupPositiveTestData() {
         return ExcelReader.readSheet(
                 ExcelPaths.SIGNUP_POS_FILE,
